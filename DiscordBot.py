@@ -16,9 +16,9 @@ except FileNotFoundError:
     traduction = gettext.translation('discord_affiliatebot', localedir='locale', languages=["en"])
     traduction.install()
 
-DISCORD_TOKEN = os.getenv('Nzg4MTUyNDkwMDQxODAyNzYz.X9fWNA.EBJ4nfCEM5j4IsIAVVyPzECzLcU')
-AMAZON_TAG = os.getenv('productlists4-20')
-ALIEXPRESS_TAG = os.getenv('')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+AMAZON_TAG = os.getenv('AMAZON_TAG')
+ALIEXPRESS_TAG = os.getenv('ALIEXPRESS_TAG')
 COMMUNITY = os.getenv('COMMUNITY')
 
 ALIEXPRESS_REGEX = "(http[s]?://[a-zA-Z0-9.-]+aliexpress.com(?:.+?dl_target_url=(.+)|[^ \n?]+?(?:.html)|[^ \n?]+))"
