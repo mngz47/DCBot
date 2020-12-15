@@ -7,7 +7,7 @@ import urllib.parse
 import discord
 from dotenv import load_dotenv
 
-load_dotenv(verbose=True)
+load_dotenv()
 
 try:
     traduction = gettext.translation('discord_affiliatebot', localedir='locale')
