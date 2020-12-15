@@ -5,9 +5,6 @@ import re
 import urllib.parse
 
 import discord
-from dotenv import load_dotenv
-
-load_dotenv(verbose=True)
 
 try:
     traduction = gettext.translation('discord_affiliatebot', localedir='locale')
@@ -16,10 +13,8 @@ except FileNotFoundError:
     traduction = gettext.translation('discord_affiliatebot', localedir='locale', languages=["en"])
     traduction.install()
 
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
-AMAZON_TAG = os.getenv('AMAZON_TAG')
-ALIEXPRESS_TAG = os.getenv('ALIEXPRESS_TAG')
-COMMUNITY = os.getenv('COMMUNITY')
+ALIEXPRESS_TAG = ''
+
 
 ALIEXPRESS_REGEX = "(http[s]?://[a-zA-Z0-9.-]+aliexpress.com(?:.+?dl_target_url=(.+)|[^ \n?]+?(?:.html)|[^ \n?]+))"
 AMAZON_REGEX = "(http[s]?://[a-zA-Z0-9.-]*(?:amazon|amzn).[a-zA-Z]+(?:.+?(?:ref=[^?]+)|.+(?= )|[^?]+))"
@@ -54,7 +49,7 @@ async def on_message(message):
     if affiliate_links:
         response = traduction.ngettext('Support {} by using this affiliate link posted by {} :',
                                        'Support {} by using these affiliate links posted by {} :',
-                                       len(affiliate_links)).format(COMMUNITY, message.author.name)
+                                       len(affiliate_links)).format('Classified Business', message.author.name)
         for affiliate_link in affiliate_links:
             response += "\n" + affiliate_link
 
@@ -79,7 +74,7 @@ def get_aliexpress_affiliate_link(url):
 
 
 def get_amazon_affiliate_link(url):
-    return url + f'?tag={AMAZON_TAG}'
+    return url + f'?tag=productlists4-20'
 
 
-client.run(DISCORD_TOKEN)
+client.run('Nzg4MTUyNDkwMDQxODAyNzYz.X9fWNA.EBJ4nfCEM5j4IsIAVVyPzECzLcU')
