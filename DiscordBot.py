@@ -13,8 +13,10 @@ except FileNotFoundError:
     traduction = gettext.translation('discord_affiliatebot', localedir='locale', languages=["en"])
     traduction.install()
 
+ACCESS_TOKEN = 'Nzg4MTUyNDkwMDQxODAyNzYz.X9fWNA.EBJ4nfCEM5j4IsIAVVyPzECzLcU'
+AMAZON_TAG = 'productlists4-20'
 ALIEXPRESS_TAG = ''
-
+COMMUNITY = 'Classified Business'
 
 ALIEXPRESS_REGEX = "(http[s]?://[a-zA-Z0-9.-]+aliexpress.com(?:.+?dl_target_url=(.+)|[^ \n?]+?(?:.html)|[^ \n?]+))"
 AMAZON_REGEX = "(http[s]?://[a-zA-Z0-9.-]*(?:amazon|amzn).[a-zA-Z]+(?:.+?(?:ref=[^?]+)|.+(?= )|[^?]+))"
@@ -74,7 +76,7 @@ def get_aliexpress_affiliate_link(url):
 
 
 def get_amazon_affiliate_link(url):
-    return url + f'?tag=productlists4-20'
+    return url + f'?tag={AMAZON_TAG}'
 
 
-client.run('Nzg4MTUyNDkwMDQxODAyNzYz.X9fWNA.EBJ4nfCEM5j4IsIAVVyPzECzLcU')
+client.run(ACCESS_TOKEN)
