@@ -15,7 +15,7 @@ except FileNotFoundError:
 
 ACCESS_TOKEN = 'Nzg4MTUyNDkwMDQxODAyNzYz.X9fWNA.EBJ4nfCEM5j4IsIAVVyPzECzLcU'
 AMAZON_TAG = 'productlists4-20'
-ALIEXPRESS_TAG = ''
+ALIEXPRESS_TAG = '07ba2927d5604361b3c9481c16c48427-1608130928519-03357-_AmxYYz'
 COMMUNITY = 'Classified Business'
 
 ALIEXPRESS_REGEX = "(http[s]?://[a-zA-Z0-9.-]+aliexpress.com(?:.+?dl_target_url=(.+)|[^ \n?]+?(?:.html)|[^ \n?]+))"
